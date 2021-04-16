@@ -1,0 +1,8 @@
+.profile__add-button {
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.profile__add-button:hover {
+    opacity: 0.6;
+}

@@ -2,3 +2,10 @@
 @import url(../bloks/wrapper/wrapper.css);
 @import url(../bloks/header/header.css);
 @import url(../bloks/header/__logo/header__logo.css);
+@import url(../bloks/profile/profile.css);
+@import url(../bloks/profile/__photo/profile__photo.css);
+@import url(../bloks/profile/__info/profile__info.css);
+@import url(../bloks/profile/__name/profile__name.css);
+@import url(../bloks/profile/__edit/profile__edit.css);
+@import url(../bloks/profile/__description/profile__description.css);
+@import url(../bloks/profile/__add-button/profile__add-button.css);
