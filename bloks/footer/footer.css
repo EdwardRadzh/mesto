@@ -1,0 +1,9 @@
+.footer {
+    margin-left: 19px;
+}
+
+@media (min-width: 1280px) {
+    .footer {
+        margin-left: 200px;
+    }
+}

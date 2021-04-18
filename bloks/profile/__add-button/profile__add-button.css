@@ -1,8 +1,18 @@
 .profile__add-button {
     transition: opacity 0.3s ease-in-out;
     cursor: pointer;
+    width: 282vw;
+    height: 50px;
 }
 
 .profile__add-button:hover {
     opacity: 0.6;
+}
+
+@media (min-width: 1280px) {
+    .profile__add-button {
+        /* width: 150px;
+        height: 100%; */
+        align-self: center;
+    }
 }

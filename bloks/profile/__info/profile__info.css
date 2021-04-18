@@ -1,0 +1,8 @@
+@media (min-width: 1280px) {
+    .profile__info {
+        display: grid;
+        grid-template-columns: 294px auto;
+        column-gap: 18px;
+        margin-left: 30px;
+    }
+}

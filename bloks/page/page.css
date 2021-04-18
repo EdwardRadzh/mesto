@@ -1,0 +1,12 @@
+.page {
+    background-color: #000000;
+    margin-top: 28px;
+    margin-bottom: 36px;
+}
+
+@media(min-width: 1280px) {
+    .page {
+        margin-top: 45px;
+        margin-bottom: 60px;
+    }
+}

@@ -3,8 +3,15 @@
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 36px;
     
+}
+
+@media (min-width: 1280px) {
+    .profile {
+        /* flex-direction: row;
+        justify-content: space-between; */
+        display: grid;
+        grid-template-columns: 1fr max-content;
+    }
 }

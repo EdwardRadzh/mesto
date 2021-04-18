@@ -1,7 +1,16 @@
 .wrapper {
     background-color: #000000;
-    margin-top: 28px;
+    /* margin-top: 28px; */
     margin-right: 19px;
     margin-left: 19px;
-    margin-bottom: 36px;
+    /* margin-bottom: 36px; */
+}
+
+@media (min-width: 1280px) {
+    .wrapper {
+        /* margin-top: 45px; */
+        margin-right: 200px;
+        margin-left: 200px;
+        /* margin-bottom: 60px; */
+    }
 }

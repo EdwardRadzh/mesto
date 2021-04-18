@@ -1,14 +1,13 @@
-.profile__description {
-    margin: 14px 0 36px;
-    text-align: center;
+.footer__copyright {
+    font-family: 'Inter', Arial, sans-serif;
+    color: #545454;
     font-size: 14px;
     line-height: 16.94px;
     font-weight: 400;
 }
 
 @media (min-width: 1280px) {
-    .profile__description {
-        text-align: start;
+    .footer__copyright {
         font-size: 18px;
         line-height: 21.78px;
     }

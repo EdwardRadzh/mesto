@@ -1,0 +1,13 @@
+.elements {
+    font-family: 'Inter', Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 20px;
+    margin-bottom: 48px;
+}
+
+@media (min-width: 1280px) {
+    .elements {
+        margin-bottom: 67px;
+    }
+}

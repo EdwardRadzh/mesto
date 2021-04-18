@@ -7,21 +7,67 @@
     <link rel="stylesheet" href="./pages/index.css">
     <title>Mesto</title>
 </head>
-<body class="wrapper">
+<body class="page">
     <header class="header">
         <img class="header__logo" src="./images/Logo_white.svg" alt="белый логотип">
+        <hr class="header__line">
     </header>
 
-    <main>
+    <main class="wrapper">
         <section class="profile">
-            <img class="profile__photo" src="./images/Photo_person.jpg" alt="аватар">
-            <div class="profile__info">
-                <h2 class="profile__name">Жак-Ив Кусто</h2>
-                <img src="./images/Edit Button.svg" alt="редактировать" class="profile__edit">
-                <p class="profile__description">Исследователь океана</p>
+            <div class="profile__general">
+                <img class="profile__photo" src="./images/Photo_person.jpg" alt="аватар">
+                <div class="profile__info">
+                    <h2 class="profile__name">Жак-Ив Кусто</h2>
+                    <img src="./images/Edit Button.svg" alt="редактировать" class="profile__edit">
+                    <p class="profile__description">Исследователь океана</p>
+                </div>
             </div>
-            <img class="profile__add-button" src="./images/Add Button.svg" alt="кнопка добавить">
+            <img class="profile__add-button" src="./images/Add Button2.svg" alt="кнопка добавить">
+        </section>
+        <section class="elements">
+            <div class="elements__element">
+                <div></div>
+            </div>
+            <div class="elements__element">
+                <img class="elements__img" src="./images/Elbrus.png" alt="Эльбрус">
+                <div class="elements__overlay">
+                    <p class="elements__title">Гора Эльбрус</p>
+                    <img class="elements__like" src="./images/like.svg" alt="лайк">
+                </div>
+            </div>
+            <div class="elements__element">
+                <img class="elements__img" src="./images/Dombai.png" alt="Домбай">
+                <div class="elements__overlay">
+                    <p class="elements__title">Домбай</p>
+                    <img class="elements__like" src="./images/like.svg" alt="лайк">
+                </div>
+            </div>
+            <div class="elements__element">
+                <img class="elements__img" src="./images/Smolensk.jpg" alt="Смоленск">
+                <div class="elements__overlay">
+                    <p class="elements__title">Смоленск</p>
+                    <img class="elements__like" src="./images/like.svg" alt="лайк">
+                </div>
+            </div>
+            <div class="elements__element">
+                <img class="elements__img" src="./images/Monrepo.jpg" alt="Монрепо">
+                <div class="elements__overlay">
+                    <p class="elements__title">Парк Монрепо</p>
+                    <img class="elements__like" src="./images/like.svg" alt="лайк">
+                </div>
+            </div>
+            <div class="elements__element">
+                <img class="elements__img" src="./images/Kazan.jpg" alt="Казань">
+                <div class="elements__overlay">
+                    <p class="elements__title">Казань</p>
+                    <img class="elements__like" src="./images/like.svg" alt="лайк">
+                </div>
+            </div>
         </section>
     </main>
+    <footer class="footer">
+        <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+    </footer>
 </body>
 </html>
