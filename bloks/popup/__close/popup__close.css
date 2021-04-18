@@ -1,0 +1,35 @@
+.popup__close {
+    position: absolute;
+    top: 72.6px;
+    right: 25px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+.popup__close:before,
+.popup__close:after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 10px;
+    width: 26px;
+    height: 4px;
+    background: white;
+}
+
+.popup__close:before {
+    transform: rotate(45deg);
+}
+
+.popup__close:after {
+    transform: rotate(-45deg);
+}
+
+@media(min-width: 1280px) {
+    .popup__close {
+        width: 40px;
+        height: 40px;
+        top: 159.72px;
+        right: 400px;
+    }
+}

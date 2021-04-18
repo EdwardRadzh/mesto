@@ -1,0 +1,19 @@
+.popup__container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    margin-top: 123px;
+    margin-right: 19px;
+    margin-left: 19px;
+    border-radius: 10px;
+}
+
+@media(min-width: 1280px) {
+    .popup__container {
+        margin-top: 195px;
+        margin-left: 425px;
+        margin-right: 425px;
+    }
+}
