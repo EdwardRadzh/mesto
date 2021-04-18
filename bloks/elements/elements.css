@@ -9,5 +9,7 @@
 @media (min-width: 1280px) {
     .elements {
         margin-bottom: 67px;
+        grid-template-columns: repeat(3, 277px);
+        column-gap: 17px;
     }
 }

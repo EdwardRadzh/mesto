@@ -4,5 +4,6 @@
         grid-template-columns: 294px auto;
         column-gap: 18px;
         margin-left: 30px;
+        align-items: center;
     }
 }

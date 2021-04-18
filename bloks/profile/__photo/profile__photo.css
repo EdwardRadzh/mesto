@@ -4,3 +4,9 @@
     margin-bottom: 22.25px;
     border-radius: 60px;
 }
+
+@media(min-width: 1280px) {
+    .profile__photo {
+        margin: 0;
+    }
+}

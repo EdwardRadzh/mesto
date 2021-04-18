@@ -13,5 +13,6 @@
         justify-content: space-between; */
         display: grid;
         grid-template-columns: 1fr max-content;
+        margin-bottom: 27.25px;
     }
 }
