@@ -6,10 +6,26 @@
     margin-bottom: 48px;
 }
 
+@media (min-width: 768px) {
+    .elements {
+        margin-bottom: 67px;
+        grid-template-columns: repeat(2, 50%);
+        column-gap: 17px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .elements {
+        margin-bottom: 67px;
+        grid-template-columns: repeat(3, 310px);
+        column-gap: 17px;
+    }
+}
+
 @media (min-width: 1280px) {
     .elements {
         margin-bottom: 67px;
-        grid-template-columns: repeat(3, 277px);
+        grid-template-columns: repeat(3, 276px);
         column-gap: 17px;
     }
 }
