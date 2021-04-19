@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -76,14 +76,18 @@
     </footer>
 
 
-    <div class="popup popup_opened">
+    <div class="popup">
         <div class="popup__container">
             <span class="popup__close"></span>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <input class="popup__name" type="text">
-            <input class="popup__description" type="text">
-            <button class="popup__btn">Сохранить</button>
+            <form name="profile-form" class="popup__form">
+                <input class="popup__name" type="text">
+                <input class="popup__description" type="text">
+                <button type="submit" class="popup__btn">Сохранить</button>
+            </form>
+            
         </div>
     </div>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+@import url(../vendor/normalize.css);
 @import url(../bloks/page/page.css);
 @import url(../vendor/fonts/fonts.css);
 @import url(../bloks/wrapper/wrapper.css);
@@ -22,6 +23,7 @@
 @import url(../bloks/footer/footer.css);
 @import url(../bloks/footer/__copyright/footer__copyright.css);
 @import url(../bloks/popup/popup.css);
+@import url(../bloks/popup/__form/popup__form.css);
 @import url(../bloks/popup/_opened/popup_opened.css);
 @import url(../bloks/popup/__close/popup__close.css);
 @import url(../bloks/popup/__container/popup__container.css);
