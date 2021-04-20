@@ -7,10 +7,9 @@
     
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
     .profile {
-        /* flex-direction: row;
-        justify-content: space-between; */
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr max-content;
         margin-bottom: 27.25px;

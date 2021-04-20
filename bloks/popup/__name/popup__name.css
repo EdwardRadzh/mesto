@@ -10,6 +10,12 @@
     outline-color: white;
 }
 
+@media(min-width: 768px) {
+    .popup__name {
+        width: 358px;
+    }
+}
+
 @media(min-width: 1280px) {
     .popup__name {
         width: 358px;

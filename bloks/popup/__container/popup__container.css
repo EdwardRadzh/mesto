@@ -9,6 +9,10 @@
     border-radius: 10px;
 }
 
+
+
+
+
 @media(min-width: 1280px) {
     .popup__container {
         margin-top: 195px;

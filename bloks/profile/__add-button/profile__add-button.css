@@ -9,9 +9,11 @@
     opacity: 0.6;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
     .profile__add-button {
         align-self: center;
-        display: block;
+        /* display: block; */
+        width: 150px;
+        height: 50px;
     }
 }

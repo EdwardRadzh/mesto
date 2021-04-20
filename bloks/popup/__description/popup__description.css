@@ -10,7 +10,7 @@
     outline-color: white;
 }
 
-@media(min-width: 1280px) {
+@media(min-width: 768px) {
     .popup__description {
         width: 358px;
     }

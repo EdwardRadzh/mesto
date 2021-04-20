@@ -2,11 +2,16 @@
     padding-left: 10px;
     transition: opacity 0.3s ease-in-out;
     cursor: pointer;
+    width: 18px;
+    height: 18px;
+    align-self: center;
 }
 
 .profile__edit:hover {
     opacity: 0.6;
 }
+
+
 
 @media (min-width: 1280px) {
     .profile__edit {

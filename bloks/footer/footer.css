@@ -2,6 +2,21 @@
     margin-left: 19px;
 }
 
+@media (min-width: 768px) {
+    .footer {
+        margin-left: 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer {
+        /* margin-top: 45px; */
+        margin-right: 100px;
+        margin-left: 100px;
+        /* margin-bottom: 60px; */
+    }
+}
+
 @media (min-width: 1280px) {
     .footer {
         margin-left: 200px;

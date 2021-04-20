@@ -1,11 +1,12 @@
 .popup__close {
+    margin: 0;
     width: 26px;
     height: 26px;
     background: transparent url(../../../images/Close\ Icon.svg) center no-repeat;
     background-size: 26px 26px;
     border: none;
     position: absolute;
-    top: 72.62px;
+    top: 90px;
     right: 18.6px;
     /* left: 0;
     bottom: 0; */
@@ -22,7 +23,7 @@
         width: 40px;
         height: 40px;
         background-size: 40px 40px;
-        top: 146.72px;
-        right: 376.72px;
+        top: 160.72px;
+        right: 390.72px;
     }
 }

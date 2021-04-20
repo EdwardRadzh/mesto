@@ -6,11 +6,13 @@
     font-weight: 400;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
     .profile__description {
         text-align: start;
         font-size: 18px;
         line-height: 21.78px;
         margin-bottom: 0;
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 }

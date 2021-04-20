@@ -1,5 +1,4 @@
 .profile__name {
-    display: inline-block;
     margin: 0;
     font-size: 27px;
     line-height: 32.68px;
@@ -10,6 +9,5 @@
     .profile__name {
         font-size: 42px;
         line-height: 48px;
-        font-weight: 500;
     } 
 }
