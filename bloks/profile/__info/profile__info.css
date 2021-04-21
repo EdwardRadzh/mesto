@@ -10,6 +10,5 @@
         display: grid;
         grid-template-columns: auto auto;
         margin-left: 30px;
-        /* align-content: center; */
     }
 }

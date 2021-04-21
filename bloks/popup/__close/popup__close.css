@@ -3,10 +3,10 @@
     width: 26px;
     height: 26px;
     background: transparent url(../../../images/Close\ Icon.svg) center no-repeat;
-    background-size: 26px 26px;
+    /* background-size: contain; */
     border: none;
     position: absolute;
-    top: 90px;
+    top: 83.38px;
     right: 18.6px;
     /* left: 0;
     bottom: 0; */
@@ -23,7 +23,7 @@
         width: 40px;
         height: 40px;
         background-size: 40px 40px;
-        top: 160.72px;
+        top: 155px;
         right: 390.72px;
     }
 }

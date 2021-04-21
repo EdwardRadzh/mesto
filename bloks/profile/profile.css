@@ -12,6 +12,6 @@
         width: 100%;
         display: grid;
         grid-template-columns: 1fr max-content;
-        margin-bottom: 27.25px;
+        margin-bottom: 47.25px;
     }
 }
