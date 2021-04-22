@@ -5,8 +5,8 @@ let saveInfoButton = document.querySelector('.popup__btn');
 let profileName = document.querySelector('.profile__name');
 let profileDescription = document.querySelector('.profile__description');
 let formElement = popup.querySelector('.popup__form');
-let nameInput = popup.querySelector('.popup__name');
-let jobInput = popup.querySelector('.popup__description');
+let nameInput = popup.querySelector('.popup__input_name');
+let jobInput = popup.querySelector('.popup__input_description');
 let profilePopupOpened = false;
 
 function setProfileInputValues() {

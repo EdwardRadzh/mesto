@@ -1,4 +1,5 @@
-.popup__name {
+.popup__input {
+    /* width: 100%; */
     border-style: none;
     border-bottom: 1px solid rgba(0, 0, 0, .2);
     margin-bottom: 30px;
@@ -11,7 +12,7 @@
 }
 
 @media(min-width: 768px) {
-    .popup__name {
+    .popup__input {
         width: 358px;
     }
 }

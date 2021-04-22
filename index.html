@@ -16,54 +16,55 @@
             <div class="profile__general">
                 <img class="profile__photo" src="./images/Photo_person.jpg" alt="аватар">
                 <div class="profile__info">
-                    <h2 class="profile__name">Жак-Ив Кусто</h2>
-                    <img src="./images/Edit_button.svg" alt="редактировать" class="profile__edit">
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
+                    <button class="profile__edit" type="button">
+                    </button>
                     <p class="profile__description">Исследователь океана</p>
                 </div>
             </div>
-            <img class="profile__add-button" src="./images/Add_Button.svg" alt="кнопка добавить">
+            <button type="button" class="profile__add-button"></button>
         </section>
         <section class="elements">
             <div class="elements__element">
                 <img class="elements__img" src="./images/Karachaevo.jpg" alt="Карачаево-Черкесия">
                 <div class="elements__overlay">
-                    <h2 class="elements__title">Карачаевск</h2>
-                    <img class="elements__like elements__like_active" src="./images/like.svg" alt="лайк">
+                    <article class="elements__title">Карачаевск</article>
+                    <button type="button" class="elements__like elements__like_active" ></button>
                 </div>
             </div>
             <div class="elements__element">
                 <img class="elements__img" src="./images/Elbrus.png" alt="Эльбрус">
                 <div class="elements__overlay">
-                    <h2 class="elements__title">Гора Эльбрус</h2>
-                    <img class="elements__like elements__like_active" src="./images/like.svg" alt="лайк">
+                    <article class="elements__title">Гора Эльбрус</article>
+                    <button type="button" class="elements__like elements__like_active" ></button>
                 </div>
             </div>
             <div class="elements__element">
                 <img class="elements__img" src="./images/Dombai.png" alt="Домбай">
                 <div class="elements__overlay">
-                    <h2 class="elements__title">Домбай</h2>
-                    <img class="elements__like elements__like_active" src="./images/like.svg" alt="лайк">
+                    <article class="elements__title">Домбай</article>
+                    <button type="button" class="elements__like elements__like_active" ></button>
                 </div>
             </div>
             <div class="elements__element">
                 <img class="elements__img" src="./images/Smolensk.jpg" alt="Смоленск">
                 <div class="elements__overlay">
-                    <h2 class="elements__title">Смоленск</h2>
-                    <img class="elements__like elements__like_active" src="./images/like.svg" alt="лайк">
+                    <article class="elements__title">Смоленск</article>
+                    <button type="button" class="elements__like elements__like_active" ></button>
                 </div>
             </div>
             <div class="elements__element">
                 <img class="elements__img" src="./images/Monrepo.jpg" alt="Монрепо">
                 <div class="elements__overlay">
-                    <h2 class="elements__title">Парк Монрепо</h2>
-                    <img class="elements__like elements__like_active" src="./images/like.svg" alt="лайк">
+                    <article class="elements__title">Парк Монрепо</article>
+                    <button type="button" class="elements__like elements__like_active" ></button>
                 </div>
             </div>
             <div class="elements__element">
                 <img class="elements__img" src="./images/Kazan.jpg" alt="Казань">
                 <div class="elements__overlay">
-                    <h2 class="elements__title">Казань</h2>
-                    <img class="elements__like elements__like_active" src="./images/like.svg" alt="лайк">
+                    <article class="elements__title">Казань</article>
+                    <button type="button" class="elements__like elements__like_active" ></button>
                 </div>
             </div>
         </section>
@@ -75,13 +76,13 @@
 
 
     <div class="popup">
-        <div class="popup__close"></div>
+        <button type="button" class="popup__close"></button>
         <div class="popup__container">
             
             <h2 class="popup__title">Редактировать профиль</h2>
             <form name="profile-form" class="popup__form">
-                <input class="popup__name" type="text">
-                <input class="popup__description" type="text">
+                <input class="popup__input popup__input_name" type="text">
+                <input class="popup__input popup__input_description" type="text">
                 <button type="submit" class="popup__btn">Сохранить</button>
             </form>
             
