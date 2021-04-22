@@ -1,14 +1,13 @@
 .popup__input {
-    /* width: 100%; */
     border-style: none;
     border-bottom: 1px solid rgba(0, 0, 0, .2);
     margin-bottom: 30px;
     font-family: inherit;
     font-size: 14px;
-    line-height: 16.94px;
-}
-.popup__name:focus {
-    outline-color: white;
+    line-height: 17px;
+    width: 238px;
+    outline: none;
+    padding-bottom: 13px;
 }
 
 @media(min-width: 768px) {

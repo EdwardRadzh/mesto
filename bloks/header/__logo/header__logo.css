@@ -1,5 +1,4 @@
 .header__logo {
-    /* display: block; */
     width: 103.74px;
     height: 24.4px;
     margin-bottom: 31.6px;
@@ -10,23 +9,20 @@
     .header__logo {
         width: 142px;
         height: 33px;
-        margin-left: 50px;
+        /* margin-left: 50px; */
         margin-bottom: 41px;
     }
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) and (max-width: 1279px) {
     .header__logo {
-        /* margin-top: 45px; */
-        margin-right: 100px;
-        margin-left: 100px;
-        
-        /* margin-bottom: 60px; */
+        margin-right: 72px;
+        margin-left: 72px;
     }
 }
 
-@media (min-width: 1280px) {
+@media (width: 1280px) {
     .header__logo {
-        margin-left: 200px;
+        margin-left: 0;
     }
-}
+} */

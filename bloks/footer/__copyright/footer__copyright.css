@@ -2,13 +2,13 @@
     font-family: 'Inter', Arial, sans-serif;
     color: #545454;
     font-size: 14px;
-    line-height: 16.94px;
+    line-height: 17px;
     font-weight: 400;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
     .footer__copyright {
         font-size: 18px;
-        line-height: 21.78px;
+        line-height: 22px;
     }
 }

@@ -1,5 +1,6 @@
 .footer {
     margin-left: 19px;
+    margin-bottom: 36px;
 }
 
 @media (min-width: 768px) {
@@ -8,17 +9,17 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1279px) {
     .footer {
-        /* margin-top: 45px; */
-        margin-right: 100px;
-        margin-left: 100px;
-        /* margin-bottom: 60px; */
+        margin-right: 72px;
+        margin-left: 72px;
+        margin-bottom: 60px;
     }
 }
 
 @media (min-width: 1280px) {
     .footer {
-        margin-left: 200px;
+        min-width: 880px;
+        margin: 0 200px;
     }
 }

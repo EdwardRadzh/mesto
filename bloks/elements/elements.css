@@ -9,31 +9,26 @@
 @media (min-width: 540px) {
     .elements {
         margin-bottom: 67px;
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 17px;
     }
 }
 
 @media (min-width: 768px) {
     .elements {
-        margin-bottom: 67px;
-        grid-template-columns: repeat(2, 50%);
-        column-gap: 17px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
     .elements {
-        margin-bottom: 67px;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 17px;
+        min-width: 880px;
+        grid-template-columns: repeat(3, calc(100%/3));
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px)  {
     .elements {
-        margin-bottom: 67px;
         grid-template-columns: repeat(3, 1fr);
-        column-gap: 17px;
     }
 }

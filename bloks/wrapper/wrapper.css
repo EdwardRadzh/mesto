@@ -10,15 +10,17 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1279px) {
     .wrapper {
-        margin-right: 100px;
-        margin-left: 100px;
+        margin-right: calc((1024px - 880px) / 2);
+        margin-left: calc((1024px - 880px) / 2);
     }
 }
 
 @media (min-width: 1280px) {
     .wrapper {
+        min-width: 880px;
         margin-left: 200px;
+        margin-right: 200px;
     }
 }

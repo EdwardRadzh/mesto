@@ -1,6 +1,6 @@
 .popup__form {
-    margin-right: 22px;
-    margin-left: 22px;
+    margin-right: auto;
+    margin-left: auto;
     background-color: white;
     display: flex;
     flex-direction: column;

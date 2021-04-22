@@ -1,22 +1,18 @@
 .popup__container {
+    max-width: 282px;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 123px;
-    margin-right: 19px;
-    margin-left: 19px;
+    margin: 123px auto 0 auto;
     border-radius: 10px;
 }
 
-
-
-
-
-@media(min-width: 1280px) {
+@media(min-width: 768px) and (max-width: 1280px) {
     .popup__container {
         margin-top: 195px;
-        margin-left: 425px;
-        margin-right: 425px;
+        min-width: 430px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
