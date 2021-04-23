@@ -4,8 +4,8 @@ let closePopupButton = document.querySelector('.popup__close');
 let profileName = document.querySelector('.profile__name');
 let profileDescription = document.querySelector('.profile__description');
 let formElement = popup.querySelector('.popup__form');
-let nameInput = popup.querySelector('.popup__input_name');
-let jobInput = popup.querySelector('.popup__input_description');
+let nameInput = popup.querySelector('.popup__input_value_name');
+let jobInput = popup.querySelector('.popup__input_value_description');
 
 function setProfileInputValues() {
     nameInput.value = profileName.textContent;
@@ -14,7 +14,7 @@ function setProfileInputValues() {
 
 function togglePopup() {
     popup.classList.toggle('popup_opened');
-    if (popup.classList.contains = true) {
+    if (popup.classList.contains('popup_opened')) {
         setProfileInputValues();   
         // console.log(nameInput.value);
     }
@@ -39,4 +39,3 @@ closePopupButton.addEventListener('click', togglePopup);
 
 formElement.addEventListener('submit', formSubmitHandler);
     
-

@@ -20,15 +20,9 @@
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 1024px){
     .elements {
-        min-width: 880px;
-        grid-template-columns: repeat(3, calc(100%/3));
-    }
-}
-
-@media (min-width: 1024px)  {
-    .elements {
+        max-width: 880px;
         grid-template-columns: repeat(3, 1fr);
     }
 }

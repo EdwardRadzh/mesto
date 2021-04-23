@@ -19,7 +19,7 @@
 
 @media (min-width: 1280px) {
     .footer {
-        min-width: 880px;
-        margin: 0 200px;
+        max-width: 880px;
+        margin: 0 auto;
     }
 }

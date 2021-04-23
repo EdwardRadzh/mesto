@@ -6,9 +6,9 @@
     background: transparent url(../../../images/Close_Icon.svg) center no-repeat;
     background-size: cover;
     border: none;
-    position: fixed;
-    top: 80px;
-    right: 18.6px;
+    position: absolute;
+    top: -29.62px;
+    right: 0;
     cursor: pointer;
     transform: opacity 0.2s ease-in-out;
     padding: 0;
@@ -18,12 +18,12 @@
     opacity: .6;
 }
 
-@media(min-width: 1024px) and (max-width: 1280px) {
+@media(min-width: 768px) {
     .popup__close {
         width: 40px;
         height: 40px;
         background-size: 40px 40px;
-        top: 161px;
-        right: 384px;
+        top: -40px;
+        right: -40px;
     }
 }

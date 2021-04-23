@@ -3,7 +3,7 @@
     border-style: none;
     transition: opacity 0.3s ease-in-out;
     cursor: pointer;
-    width: 282px;
+    max-width: 282px;
     height: 50px;
     background-size: contain;
     border-radius: 2px;

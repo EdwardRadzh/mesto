@@ -1,7 +1,6 @@
 .profile__general {
     display: flex;
     justify-content: center;
-    /* flex-direction: column; */
     align-items: center;
     flex-wrap: wrap;
 }
@@ -10,5 +9,6 @@
     .profile__general {
         flex-direction: row;
         justify-content: flex-start;
+        flex-wrap: nowrap;
     }
 }
