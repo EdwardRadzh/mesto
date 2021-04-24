@@ -10,10 +10,6 @@
     border: none;
 }
 
-.profile__edit:focus {
-    border: none;
-}
-
 .profile__edit:hover {
     opacity: 0.6;
 }

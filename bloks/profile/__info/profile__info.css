@@ -1,15 +1,11 @@
 .profile__info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
     margin-right: 10px;
 }
 
-@media (min-width: 429px) {
+@media (min-width: 768px) {
     .profile__info {
-        text-align: left;
-        display: grid;
-        grid-template-columns: auto auto;
         margin-left: 30px;
     }
 }
