@@ -18,7 +18,7 @@
     opacity: .8;
 }
 
-@media(min-width: 1024px) and (max-width: 1280px) {
+@media(min-width: 1024px) {
     .popup__btn {
         width: 358px;
         font-size: 18px;

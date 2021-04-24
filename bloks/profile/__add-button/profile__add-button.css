@@ -3,10 +3,11 @@
     border-style: none;
     transition: opacity 0.3s ease-in-out;
     cursor: pointer;
-    max-width: 282px;
+    width: 282px;
     height: 50px;
     background-size: contain;
     border-radius: 2px;
+    align-self: center;
 }
 
 .profile__add-button:hover {

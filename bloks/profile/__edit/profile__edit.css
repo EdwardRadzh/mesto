@@ -10,11 +10,15 @@
     border: none;
 }
 
+.profile__edit:focus {
+    border: none;
+}
+
 .profile__edit:hover {
     opacity: 0.6;
 }
 
-@media (min-width: 1024px) and (max-width: 1280px) {
+@media (min-width: 1024px) {
     .profile__edit {
         width: 24px;
         height: 24px;
