@@ -1,11 +1,11 @@
 .popup__btn {
-    border-radius: 0;
+    border-radius: 2px;
     border: 0;
     background: #000000;
     color: white;
     font-family: inherit;
-    margin-bottom: 25px;
-    width: 183.333px;
+    margin: 15px auto 25px auto;
+    width: 238px;
     height: 46px;
     cursor: pointer;
     transition: opacity 0.2s ease-in-out;
@@ -18,10 +18,12 @@
     opacity: .8;
 }
 
-@media(min-width: 1280px) {
+@media(min-width: 1024px) {
     .popup__btn {
         width: 358px;
         font-size: 18px;
         line-height: 21.78px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

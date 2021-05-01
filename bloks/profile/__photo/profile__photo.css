@@ -5,7 +5,7 @@
     border-radius: 60px;
 }
 
-@media(min-width: 1280px) {
+@media(min-width: 768px) {
     .profile__photo {
         margin: 0;
     }

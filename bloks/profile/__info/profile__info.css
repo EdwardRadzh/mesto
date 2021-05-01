@@ -1,13 +1,11 @@
 .profile__info {
-    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-right: 10px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
     .profile__info {
-        text-align: left;
-        display: grid;
-        grid-template-columns: auto auto;
-        column-gap: 18px;
         margin-left: 30px;
     }
 }

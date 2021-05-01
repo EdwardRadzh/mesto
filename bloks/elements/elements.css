@@ -6,10 +6,23 @@
     margin-bottom: 48px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 540px) {
     .elements {
         margin-bottom: 67px;
-        grid-template-columns: repeat(3, 277px);
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 17px;
+    }
+}
+
+@media (min-width: 768px) {
+    .elements {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px){
+    .elements {
+        max-width: 880px;
+        grid-template-columns: repeat(3, 1fr);
     }
 }

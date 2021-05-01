@@ -1,11 +1,15 @@
 .profile__general {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
     .profile__general {
         flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
     }
 }
