@@ -1,11 +1,14 @@
-let openPopupButton = document.querySelector('.profile__edit');
-let popup = document.querySelector('.popup');
-let closePopupButton = document.querySelector('.popup__close');
-let profileName = document.querySelector('.profile__name');
-let profileDescription = document.querySelector('.profile__description');
-let formElement = popup.querySelector('.popup__form');
-let nameInput = popup.querySelector('.popup__input_value_name');
-let jobInput = popup.querySelector('.popup__input_value_description');
+const openPopupButton = document.querySelector('.profile__edit');
+const popup = document.querySelector('.popup');
+const closePopupButton = document.querySelector('.popup__close');
+const profileName = document.querySelector('.profile__name');
+const profileDescription = document.querySelector('.profile__description');
+const formElement = popup.querySelector('.popup__form');
+const nameInput = popup.querySelector('.popup__input_value_name');
+const jobInput = popup.querySelector('.popup__input_value_description');
+const addPlaceButton = document.querySelector('.profile__add-button');
+const like = document.querySelector('.elements__like');
+
 
 function setProfileInputValues() {
     nameInput.value = profileName.textContent;
@@ -33,8 +36,57 @@ function formSubmitHandler (evt) {
     togglePopup();
 }
 
+const initialCards = [
+    {
+      name: 'Архыз',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    },
+    {
+      name: 'Челябинская область',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    },
+    {
+      name: 'Иваново',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    },
+    {
+      name: 'Камчатка',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    },
+    {
+      name: 'Холмогорский район',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    },
+    {
+      name: 'Байкал',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+    }
+  ];
+
+  const templateElement = document.querySelector('#template-element').content;
+  const elementsContainer = document.querySelector('.elements');
+
+//   for (let i = 0; i < initialCards.length; i = i + 1) {
+//       const currentItem = initialCards[i];
+//       const item = templateElement.querySelector('.elements__element').cloneNode(true);
+//       item.querySelector('.elements__img').src = currentItem.link;
+//       item.querySelector('.elements__title').textContent = currentItem.name;
+//       elementsContainer.append(item);
+//   }
+
+  initialCards.forEach(function(card) {
+    const item = templateElement.querySelector('.elements__element').cloneNode(true);
+    item.querySelector('.elements__img').src = card.link;
+    item.querySelector('.elements__title').textContent = card.name;
+    elementsContainer.append(item);
+  })
+
+
 openPopupButton.addEventListener("click", togglePopup);
 
 closePopupButton.addEventListener('click', togglePopup);
+
+formElement.addEventListener('submit', formSubmitHandler);
+    
 
 formElement.addEventListener('submit', formSubmitHandler);
