@@ -7,7 +7,9 @@ const formElement = popup.querySelector('.popup__form');
 const nameInput = popup.querySelector('.popup__input_value_name');
 const jobInput = popup.querySelector('.popup__input_value_description');
 const addPlaceButton = document.querySelector('.profile__add-button');
-const like = document.querySelector('.elements__like');
+
+
+
 
 
 function setProfileInputValues() {
@@ -66,20 +68,25 @@ const initialCards = [
   const templateElement = document.querySelector('#template-element').content;
   const elementsContainer = document.querySelector('.elements');
 
-//   for (let i = 0; i < initialCards.length; i = i + 1) {
-//       const currentItem = initialCards[i];
-//       const item = templateElement.querySelector('.elements__element').cloneNode(true);
-//       item.querySelector('.elements__img').src = currentItem.link;
-//       item.querySelector('.elements__title').textContent = currentItem.name;
-//       elementsContainer.append(item);
-//   }
-
   initialCards.forEach(function(card) {
     const item = templateElement.querySelector('.elements__element').cloneNode(true);
     item.querySelector('.elements__img').src = card.link;
     item.querySelector('.elements__title').textContent = card.name;
     elementsContainer.append(item);
+
+    item.querySelector('.elements__like').addEventListener('click', function(evt) {
+      evt.target.classList.toggle('elements__like_active');
+    })
+  
+
+  });
+
+  const likeCard = templateElement.querySelector('.elements__element').cloneNode(true);
+  likeCard.querySelector('.elements__like').addEventListener('click', function(evt) {
+      
+      console.log(evt);
   })
+
 
 
 openPopupButton.addEventListener("click", togglePopup);

@@ -5,12 +5,6 @@
     position: relative;
 }
 
-@media (min-width: 540px) {
-    .elements__element {
-        /* width: 100%; */
-    }
-}
-
 @media (min-width: 768px) {
     .elements__element {
         width: 100%;
