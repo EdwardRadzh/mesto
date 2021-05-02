@@ -1,6 +1,18 @@
   .elements__element{
-    min-width: 282px;
+    max-width: 282px;
     background-color: white;
     border-radius: 10px;
     position: relative;
+}
+
+@media (min-width: 540px) {
+    .elements__element {
+        /* width: 100%; */
+    }
+}
+
+@media (min-width: 768px) {
+    .elements__element {
+        width: 100%;
+    }
 }
