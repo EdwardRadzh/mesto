@@ -82,10 +82,22 @@
 
 
     <div class="popup">
-        
         <div class="popup__container">
             <button type="button" class="popup__close"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
+            <form name="profile-form" class="popup__form">
+                <input class="popup__input popup__input_value_name" type="text">
+                <input class="popup__input popup__input_value_description" type="text">
+                <button type="submit" class="popup__btn">Сохранить</button>
+            </form>
+            <form action=""></form>         
+        </div>
+    </div>
+
+    <div class="popup popup__add-card">
+        <div class="popup__container">
+            <button type="button" class="popup__close popup__close-add-button"></button>
+            <h2 class="popup__title">Новое место</h2>
             <form name="profile-form" class="popup__form">
                 <input class="popup__input popup__input_value_name" type="text">
                 <input class="popup__input popup__input_value_description" type="text">

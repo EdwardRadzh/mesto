@@ -7,21 +7,26 @@ const formElement = popup.querySelector('.popup__form');
 const nameInput = popup.querySelector('.popup__input_value_name');
 const jobInput = popup.querySelector('.popup__input_value_description');
 const addPlaceButton = document.querySelector('.profile__add-button');
+const popupAddCard = document.querySelector('.popup__add-card');
+const openPopupAddCard = document.querySelector('.profile__add-button');
+const closePopupAddCard = document.querySelector('.popup__close-add-button');
 
 
 
+function openPopup() {
+    popupAddCard.classList.toggle('popup_opened');
+};
 
 
 function setProfileInputValues() {
     nameInput.value = profileName.textContent;
     jobInput.value = profileDescription.textContent;
-}
+};
 
 function togglePopup() {
     popup.classList.toggle('popup_opened');
     if (popup.classList.contains('popup_opened')) {
-        setProfileInputValues();   
-        // console.log(nameInput.value);
+        setProfileInputValues();
     }
 };
 
@@ -91,3 +96,7 @@ openPopupButton.addEventListener("click", togglePopup);
 closePopupButton.addEventListener('click', togglePopup);
 
 formElement.addEventListener('submit', formSubmitHandler);
+
+openPopupAddCard.addEventListener('click', openPopup)
+
+closePopupAddCard.addEventListener('click', openPopup)
