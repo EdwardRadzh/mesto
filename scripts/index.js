@@ -77,23 +77,17 @@ const initialCards = [
     item.querySelector('.elements__like').addEventListener('click', function(evt) {
       evt.target.classList.toggle('elements__like_active');
     })
-  
-
+    
+    const cardRemoveButton = item.querySelector('.elements__trash');
+    cardRemoveButton.addEventListener('click', function(evt) {
+        evt.target.closest('.elements__element').remove();
+    })
   });
-
-  const likeCard = templateElement.querySelector('.elements__element').cloneNode(true);
-  likeCard.querySelector('.elements__like').addEventListener('click', function(evt) {
-      
-      console.log(evt);
-  })
 
 
 
 openPopupButton.addEventListener("click", togglePopup);
 
 closePopupButton.addEventListener('click', togglePopup);
-
-formElement.addEventListener('submit', formSubmitHandler);
-    
 
 formElement.addEventListener('submit', formSubmitHandler);
