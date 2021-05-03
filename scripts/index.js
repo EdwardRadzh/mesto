@@ -10,19 +10,22 @@ const addPlaceButton = document.querySelector('.profile__add-button');
 const popupAddCard = document.querySelector('.popup__add-card');
 const openPopupAddCard = document.querySelector('.profile__add-button');
 const closePopupAddCard = document.querySelector('.popup__close-add-button');
+const placeInput = document.querySelector('.popup__input_value_place');
+const linkInput = document.querySelector('.popup__input_value_link');
+const placeTitle = document.querySelector('.elements__title');
+const placeImg = document.querySelector('.elements__img');
+const addCardButton = document.querySelector('.popup__btn_add-card');
 
 
 
-function openPopup() {
-    popupAddCard.classList.toggle('popup_opened');
-};
 
-
+// отправление данных в инпут
 function setProfileInputValues() {
     nameInput.value = profileName.textContent;
     jobInput.value = profileDescription.textContent;
 };
 
+// отерытие/закрытие попапа
 function togglePopup() {
     popup.classList.toggle('popup_opened');
     if (popup.classList.contains('popup_opened')) {
@@ -30,18 +33,21 @@ function togglePopup() {
     }
 };
 
+// 
 function getProfileSave() {
-    // console.log(nameInput.value);
     profileName.textContent = nameInput.value;
     profileDescription.textContent = jobInput.value;
 }
 
 function formSubmitHandler (evt) {
     evt.preventDefault();
-    // console.log(nameInput.value, evt);
-    getProfileSave();
+    // getProfileSave();
     togglePopup();
-}
+};
+
+function openPopup() {
+    popupAddCard.classList.toggle('popup_opened');
+};
 
 const initialCards = [
     {
@@ -73,20 +79,26 @@ const initialCards = [
   const templateElement = document.querySelector('#template-element').content;
   const elementsContainer = document.querySelector('.elements');
 
+  // добваить карточки при загрузке страницы
+
   initialCards.forEach(function(card) {
     const item = templateElement.querySelector('.elements__element').cloneNode(true);
     item.querySelector('.elements__img').src = card.link;
     item.querySelector('.elements__title').textContent = card.name;
     elementsContainer.append(item);
+    
+    // лайк карточки
 
     item.querySelector('.elements__like').addEventListener('click', function(evt) {
       evt.target.classList.toggle('elements__like_active');
     })
     
+    // удаление карточки
     const cardRemoveButton = item.querySelector('.elements__trash');
     cardRemoveButton.addEventListener('click', function(evt) {
         evt.target.closest('.elements__element').remove();
     })
+    
   });
 
 
