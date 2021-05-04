@@ -19,6 +19,7 @@ const formPlace = popupAddCard.querySelector('.popup__form_place');
 const popupPhoto = document.querySelector('.popup__open-card');
 const photo = document.querySelector('.popup__photo');
 const photoName = document.querySelector('.popup__photo-description');
+const closePhoto = document.querySelector('.popup__close-photo-button');
 
 // отправление данных в инпут
 function setProfileInputValues() {
@@ -96,6 +97,12 @@ const initialCards = [
     }
   ];
 
+function openPhoto(link, name) {
+  popupPhoto.classList.toggle('popup_opened');
+  photo.src = link;
+  photoName.textContent = name;
+}
+
 const templateElement = document.querySelector('#template-element').content;
 const elementsContainer = document.querySelector('.elements');
 
@@ -147,6 +154,8 @@ closePopupButton.addEventListener('click', togglePopup);
 
 formElement.addEventListener('submit', formSubmitHandler);
 
-openPopupAddCard.addEventListener('click', openPopup)
+openPopupAddCard.addEventListener('click', openPopup);
 
-closePopupAddCard.addEventListener('click', openPopup)
+closePopupAddCard.addEventListener('click', openPopup);
+
+closePhoto.addEventListener('click', openPhoto);
