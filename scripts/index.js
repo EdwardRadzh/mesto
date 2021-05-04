@@ -3,7 +3,7 @@ const popup = document.querySelector('.popup');
 const closePopupButton = document.querySelector('.popup__close');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
-const formElement = popup.querySelector('.popup__form');
+const formElement = popup.querySelector('.popup__form_profile');
 const nameInput = popup.querySelector('.popup__input_value_name');
 const jobInput = popup.querySelector('.popup__input_value_description');
 const addPlaceButton = document.querySelector('.profile__add-button');
@@ -15,9 +15,7 @@ const linkInput = document.querySelector('.popup__input_value_link');
 const placeTitle = document.querySelector('.elements__title');
 const placeImg = document.querySelector('.elements__img');
 const addCardButton = document.querySelector('.popup__btn_add-card');
-
-
-
+const formPlace = popupAddCard.querySelector('.popup__form_place');
 
 // отправление данных в инпут
 function setProfileInputValues() {
@@ -33,22 +31,34 @@ function togglePopup() {
     }
 };
 
-// 
+// отправка данных из инпута на страницу
 function getProfileSave() {
     profileName.textContent = nameInput.value;
     profileDescription.textContent = jobInput.value;
 }
 
+// сохрание данных из попапа на страницу
 function formSubmitHandler (evt) {
     evt.preventDefault();
-    // getProfileSave();
+    getProfileSave();
     togglePopup();
 };
 
+// добавить новую карточку
+function cardSubmitHandler(evt) {
+    evt.preventDefault();
+    setNewCard(placeInput.value, linkInput.value, 'start');
+    openPopup();
+    placeInput.value = 'Название';
+    linkInput.value = 'Ссылка на картинку';
+};
+
+// открыть попап для карточек
 function openPopup() {
     popupAddCard.classList.toggle('popup_opened');
 };
 
+// массив
 const initialCards = [
     {
       name: 'Архыз',
@@ -76,32 +86,42 @@ const initialCards = [
     }
   ];
 
-  const templateElement = document.querySelector('#template-element').content;
-  const elementsContainer = document.querySelector('.elements');
+const templateElement = document.querySelector('#template-element').content;
+const elementsContainer = document.querySelector('.elements');
 
-  // добваить карточки при загрузке страницы
-
-  initialCards.forEach(function(card) {
+function setNewCard(name, link, position) {
     const item = templateElement.querySelector('.elements__element').cloneNode(true);
-    item.querySelector('.elements__img').src = card.link;
-    item.querySelector('.elements__title').textContent = card.name;
-    elementsContainer.append(item);
+    item.querySelector('.elements__img').src = link;
+    item.querySelector('.elements__title').textContent = name;
+    (position === 'start') ? elementsContainer.prepend(item) : elementsContainer.append(item);
     
     // лайк карточки
-
-    item.querySelector('.elements__like').addEventListener('click', function(evt) {
-      evt.target.classList.toggle('elements__like_active');
+    item.querySelector('.elements__like').addEventListener('click', function (evt) {
+        evt.target.classList.toggle('elements__like_active');
     })
-    
+
     // удаление карточки
     const cardRemoveButton = item.querySelector('.elements__trash');
-    cardRemoveButton.addEventListener('click', function(evt) {
+    cardRemoveButton.addEventListener('click', function (evt) {
         evt.target.closest('.elements__element').remove();
     })
-    
-  });
+  
+}
+
+// перебор массива
+function initCards() {
+    initialCards.forEach((el) => {
+        setNewCard(el.name, el.link)
+    })
+}
+
+// добваить карточки при загрузке страницы
+
+initCards()
 
 
+
+formPlace.addEventListener('submit', cardSubmitHandler);
 
 openPopupButton.addEventListener("click", togglePopup);
 
