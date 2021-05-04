@@ -1,0 +1,5 @@
+.popup__photo-container {
+    margin: 136px auto 133px;
+   display: flex;
+   flex-direction: column;
+}

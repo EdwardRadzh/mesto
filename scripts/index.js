@@ -16,6 +16,9 @@ const placeTitle = document.querySelector('.elements__title');
 const placeImg = document.querySelector('.elements__img');
 const addCardButton = document.querySelector('.popup__btn_add-card');
 const formPlace = popupAddCard.querySelector('.popup__form_place');
+const popupPhoto = document.querySelector('.popup__open-card');
+const photo = document.querySelector('.popup__photo');
+const photoName = document.querySelector('.popup__photo-description');
 
 // отправление данных в инпут
 function setProfileInputValues() {
@@ -35,6 +38,13 @@ function togglePopup() {
 function openPopup() {
     popupAddCard.classList.toggle('popup_opened');
 };
+
+// открыть попап с фото
+function openPhoto(link, name) {
+    popupPhoto.classList.toggle('popup_opened');
+    photo.src = link;
+    photoName.textContent = name;
+}
 
 // отправка данных из инпута на страницу
 function getProfileSave() {
@@ -91,8 +101,11 @@ const elementsContainer = document.querySelector('.elements');
 
 function setNewCard(name, link, position) {
     const item = templateElement.querySelector('.elements__element').cloneNode(true);
-    item.querySelector('.elements__img').src = link;
-    item.querySelector('.elements__title').textContent = name;
+    const elementImg = item.querySelector('.elements__img')
+    const elementTitle = item.querySelector('.elements__title')
+    elementImg.src = link;
+
+    elementTitle.textContent = name;
     (position === 'start') ? elementsContainer.prepend(item) : elementsContainer.append(item);
     
     // лайк карточки
@@ -105,6 +118,11 @@ function setNewCard(name, link, position) {
     cardRemoveButton.addEventListener('click', function (evt) {
         evt.target.closest('.elements__element').remove();
     })
+
+      // открытие фотографии
+      elementImg.addEventListener('click', function(link, name){
+          openPhoto(link, name);
+      });
   
 }
 
