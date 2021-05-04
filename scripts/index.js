@@ -23,12 +23,17 @@ function setProfileInputValues() {
     jobInput.value = profileDescription.textContent;
 };
 
-// отерытие/закрытие попапа
+// открытие/закрытие попапа
 function togglePopup() {
     popup.classList.toggle('popup_opened');
     if (popup.classList.contains('popup_opened')) {
         setProfileInputValues();
     }
+};
+
+// открыть попап для карточек
+function openPopup() {
+    popupAddCard.classList.toggle('popup_opened');
 };
 
 // отправка данных из инпута на страницу
@@ -49,13 +54,8 @@ function cardSubmitHandler(evt) {
     evt.preventDefault();
     setNewCard(placeInput.value, linkInput.value, 'start');
     openPopup();
-    placeInput.value = 'Название';
-    linkInput.value = 'Ссылка на картинку';
-};
-
-// открыть попап для карточек
-function openPopup() {
-    popupAddCard.classList.toggle('popup_opened');
+    placeInput.value = '';
+    linkInput.value = '';
 };
 
 // массив
@@ -117,7 +117,7 @@ function initCards() {
 
 // добваить карточки при загрузке страницы
 
-initCards()
+initCards();
 
 
 
