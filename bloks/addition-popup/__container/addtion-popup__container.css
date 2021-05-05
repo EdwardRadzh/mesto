@@ -1,0 +1,20 @@
+.addition-popup__container {
+    max-width: 282px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 123px auto 0 auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+@media(min-width: 768px) {
+    .addition-popup__container {
+        margin-top: 195px;
+        min-width: 430px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 430px;
+    }
+}

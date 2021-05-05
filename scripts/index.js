@@ -7,7 +7,7 @@ const formElement = popup.querySelector('.popup__form_profile');
 const nameInput = popup.querySelector('.popup__input_value_name');
 const jobInput = popup.querySelector('.popup__input_value_description');
 const addPlaceButton = document.querySelector('.profile__add-button');
-const popupAddCard = document.querySelector('.popup__add-card');
+const popupAddCard = document.querySelector('.popup_type_add');
 const openPopupAddCard = document.querySelector('.profile__add-button');
 const closePopupAddCard = document.querySelector('.popup__close-add-button');
 const placeInput = document.querySelector('.popup__input_value_place');
@@ -16,7 +16,7 @@ const placeTitle = document.querySelector('.elements__title');
 const placeImg = document.querySelector('.elements__img');
 const addCardButton = document.querySelector('.popup__btn_add-card');
 const formPlace = popupAddCard.querySelector('.popup__form_place');
-const popupPhoto = document.querySelector('.popup__open-card');
+const popupPhoto = document.querySelector('.popup_type_open');
 const photo = document.querySelector('.popup__photo');
 const photoName = document.querySelector('.popup__photo-description');
 const closePhoto = document.querySelector('.popup__close-photo-button');
@@ -123,6 +123,7 @@ function setNewCard(name, link, position) {
         photo.src = link;
         photoName.textContent = name;
       });
+    
 }
 
 // перебор массива

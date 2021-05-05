@@ -1,0 +1,29 @@
+.addition-popup__close-add-button {
+    border-style: none;
+    margin: 0;
+    width: 26px;
+    height: 26px;
+    background: transparent url(../../../images/Close_Icon.svg) center no-repeat;
+    background-size: cover;
+    border: none;
+    position: absolute;
+    top: -29.62px;
+    right: 0;
+    cursor: pointer;
+    transform: opacity 0.2s ease-in-out;
+    padding: 0;
+}
+
+.addition-popup__close-add-button:hover {
+    opacity: .6;
+}
+
+@media(min-width: 768px) {
+    .addition-popup__close-add-button {
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+        top: -40px;
+        right: -40px;
+    }
+}

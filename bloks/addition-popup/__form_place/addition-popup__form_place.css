@@ -1,0 +1,8 @@
+.addition-popup__form_place {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

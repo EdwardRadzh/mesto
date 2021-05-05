@@ -1,0 +1,17 @@
+.addition-popup__input {
+    border-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    margin-bottom: 30px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 17px;
+    width: 238px;
+    outline: none;
+    padding-bottom: 13px;
+}
+
+@media(min-width: 768px) {
+    .addition-popup__input {
+        width: 358px;
+    }
+}

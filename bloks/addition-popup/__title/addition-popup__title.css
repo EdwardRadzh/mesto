@@ -1,0 +1,15 @@
+.addition-popup__title {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 900;
+    margin: 25px auto 75px 20px;
+}
+
+@media(min-width: 1024px) {
+    .addition-popup__title {
+        margin-top: 34px;
+        margin-left: 34px;
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
