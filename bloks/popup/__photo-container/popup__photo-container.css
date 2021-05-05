@@ -1,5 +1,5 @@
 .popup__photo-container {
-margin: 136px auto 133px;
+   margin: 136px 40px 133px;
    display: flex;
    flex-direction: column;
    position: relative;
@@ -8,6 +8,6 @@ margin: 136px auto 133px;
 @media(min-width: 1024px) {
     .popup__photo-container {
         max-width: 916px;
-        margin: 90px auto 90px auto;
+        margin: 90px auto 0;
     }
 }

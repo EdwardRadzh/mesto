@@ -40,13 +40,6 @@ function openPopup() {
     popupAddCard.classList.toggle('popup_opened');
 };
 
-// открыть попап с фото
-function openPhoto(link, name) {
-    popupPhoto.classList.toggle('popup_opened');
-    photo.src = link;
-    photoName.textContent = name;
-}
-
 // отправка данных из инпута на страницу
 function getProfileSave() {
     profileName.textContent = nameInput.value;
@@ -97,11 +90,10 @@ const initialCards = [
     }
   ];
 
-function openPhoto(link, name) {
-  popupPhoto.classList.toggle('popup_opened');
-  photo.src = link;
-  photoName.textContent = name;
-}
+  // открыть попап с фото
+  function openPhoto() {
+    popupPhoto.classList.toggle('popup_opened');
+  }
 
 const templateElement = document.querySelector('#template-element').content;
 const elementsContainer = document.querySelector('.elements');
@@ -111,7 +103,6 @@ function setNewCard(name, link, position) {
     const elementImg = item.querySelector('.elements__img')
     const elementTitle = item.querySelector('.elements__title')
     elementImg.src = link;
-
     elementTitle.textContent = name;
     (position === 'start') ? elementsContainer.prepend(item) : elementsContainer.append(item);
     
@@ -127,16 +118,17 @@ function setNewCard(name, link, position) {
     })
 
       // открытие фотографии
-      elementImg.addEventListener('click', function(link, name){
-          openPhoto(link, name);
+    elementImg.addEventListener('click', function(){
+        openPhoto();
+        photo.src = link;
+        photoName.textContent = name;
       });
-  
 }
 
 // перебор массива
 function initCards() {
     initialCards.forEach((el) => {
-        setNewCard(el.name, el.link)
+    setNewCard(el.name, el.link)
     })
 }
 
