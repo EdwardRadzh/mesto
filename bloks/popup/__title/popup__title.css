@@ -2,7 +2,7 @@
     font-size: 18px;
     line-height: 22px;
     font-weight: 900;
-    margin: 25px auto 75px 20px;
+    margin: 27px auto 75px 20px;
 }
 
 @media(min-width: 1024px) {
@@ -11,5 +11,6 @@
         margin-left: 34px;
         font-size: 24px;
         line-height: 29px;
+        margin-bottom: 48px;
     }
 }

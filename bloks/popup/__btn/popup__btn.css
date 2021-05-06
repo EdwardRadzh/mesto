@@ -21,6 +21,7 @@
 @media(min-width: 1024px) {
     .popup__btn {
         width: 358px;
+        height: 54.5px;
         font-size: 18px;
         line-height: 21.78px;
         margin-left: auto;

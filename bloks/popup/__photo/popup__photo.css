@@ -1,5 +1,12 @@
 .popup__photo {
-    max-width: 75vw;
-    max-height: 75vh;
-    margin-bottom: 10px;
+    width: 100%;
+    object-fit: cover;
+    height: 299px;
+    padding-bottom: 10px;
+}
+
+@media(min-width: 1024px) {
+    .popup__photo {
+        min-height: 540px;
+    }
 }

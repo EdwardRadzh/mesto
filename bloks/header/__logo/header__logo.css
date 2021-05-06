@@ -1,10 +1,10 @@
-  
-.header__logo {
+  .header__logo {
     width: 103.74px;
     height: 24.4px;
     margin-bottom: 31.6px;
-    margin-left: 19px;
+    margin-left: 18px;
 }
+
 
 @media (min-width: 768px) {
     .header__logo {
@@ -13,16 +13,3 @@
         margin-bottom: 41px;
     }
 }
-
-/* @media (min-width: 1024px) and (max-width: 1279px) {
-    .header__logo {
-        margin-right: 72px;
-        margin-left: 72px;
-    }
-}
-
-@media (width: 1280px) {
-    .header__logo {
-        margin-left: 0;
-    }
-} */

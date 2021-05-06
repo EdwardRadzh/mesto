@@ -7,11 +7,12 @@
     line-height: 17px;
     width: 238px;
     outline: none;
-    padding-bottom: 13px;
+    padding-bottom: 9px;
 }
 
 @media(min-width: 768px) {
     .popup__input {
         width: 358px;
+        margin-bottom: 29px;
     }
 }

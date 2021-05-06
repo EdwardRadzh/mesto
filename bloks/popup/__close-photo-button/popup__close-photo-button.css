@@ -1,3 +1,11 @@
 .popup__close-photo-button {
-    
+    position: absolute;
+    right: 0px;
+    top: -52px;
+}
+
+@media(min-width: 1024px) {
+    .popup__close-photo-button {
+        right: -45px;
+    }
 }

@@ -1,13 +1,17 @@
 .popup__photo-container {
-   margin: 136px 40px 133px;
-   display: flex;
-   flex-direction: column;
-   position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 136px;
 }
 
 @media(min-width: 1024px) {
-    .popup__photo-container {
-        max-width: 916px;
-        margin: 90px auto 0;
-    }
+  .popup__photo-container {
+      margin-top: 90px;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 816px;
+  }  
 }
