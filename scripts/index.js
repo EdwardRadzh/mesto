@@ -27,29 +27,16 @@ function setProfileInputValues() {
     jobInput.value = profileDescription.textContent;
 };
 
-// открытие попапа профиля
-function openPopupProfile() {
+// открыть попап
+function openPopup(popup) {
     popup.classList.add('popup_opened');
-    if (popup.classList.contains('popup_opened')) {
-        setProfileInputValues();
-    }
-};
+}
 
-// закрытие попапа профиля
-function closePopupProfile() {
+// закрыть попап
+function closePopup(popup) {
     popup.classList.remove('popup_opened');
 }
 
-// открыть попап для карточек
-function openCardPopup() {
-    popupAddCard.classList.add('popup_opened');
-};
-
-// закрыть попап для карточек
-function closeCardPopup() {
-    popupAddCard.classList.remove('popup_opened');
-    formPlace.reset();
-};
 
 // отправка данных из инпута на страницу
 function addProfileSave() {
@@ -61,27 +48,18 @@ function addProfileSave() {
 function formSubmitHandler (evt) {
     evt.preventDefault();
     addProfileSave();
-    closePopupProfile();
+    closePopup(popup);
 };
 
 // добавить новую карточку
 function cardSubmitHandler(evt) {
     evt.preventDefault();
     addCard(placeInput.value, linkInput.value, 'start');
-    closeCardPopup();
+    closePopup(popupAddCard);
     formPlace.reset();
 };
 
 
-  // открыть попап с фото
-  function openPopupPhoto() {
-    popupPhoto.classList.add('popup_opened');
-  }
-
-  // закрыть попап с фото
-  function closePopupPhoto() {
-    popupPhoto.classList.remove('popup_opened');
-  }
 
 
 const templateElement = document.querySelector('#template-element').content;
@@ -93,46 +71,58 @@ function getCard (name, link) {
     const elementImg = item.querySelector('.elements__img');
     const elementTitle = item.querySelector('.elements__title');
     elementImg.src = link;
+    elementImg.alt = name;
     elementTitle.textContent = name;
+    item.querySelector('.elements__like').addEventListener('click', function (evt) {
+        evt.target.classList.toggle('elements__like_active');
+        });
+   
+        item.querySelector('.elements__trash').addEventListener('click', function (evt) {
+           evt.target.closest('.elements__element').remove();
+       });
+   
+       item.querySelector('.elements__img').addEventListener('click', function(){
+           openPopup(popupPhoto);
+           photo.src = link;
+           photoName.textContent = name;
+       });
     return item
 }
 
 // отрисовать карточку и повесить события
 function addCard(name, link, position) {
     const newCard = getCard(name, link);
-    
-     newCard.querySelector('.elements__like').addEventListener('click', function (evt) {
-     evt.target.classList.toggle('elements__like_active');
-     });
-
-     newCard.querySelector('.elements__trash').addEventListener('click', function (evt) {
-        evt.target.closest('.elements__element').remove();
-    });
-
-    newCard.querySelector('.elements__img').addEventListener('click', function(){
-        openPopupPhoto();
-        photo.src = link;
-        photoName.textContent = name;
-    });
     (position === 'start') ? elementsContainer.prepend(newCard) : elementsContainer.append(newCard);
 };
 
 // перебор массива
 initialCards.forEach((el) => {
-    addCard(el.name, el.link)
+    addCard(el.name, el.link);
 });
 
 
 formPlace.addEventListener('submit', cardSubmitHandler);
 
-openPopupButton.addEventListener("click", openPopupProfile);
+openPopupButton.addEventListener("click", function () {
+    openPopup(popup);
+    setProfileInputValues();
+});
 
-closePopupButton.addEventListener('click', closePopupProfile);
+closePopupButton.addEventListener('click', function () {
+    closePopup(popup);
+});
 
 formElement.addEventListener('submit', formSubmitHandler);
 
-openPopupAddCard.addEventListener('click', openCardPopup);
+openPopupAddCard.addEventListener('click', function () {
+    openPopup(popupAddCard);
+});
 
-closePopupAddCard.addEventListener('click', closeCardPopup);
+closePopupAddCard.addEventListener('click', function () {
+    closePopup(popupAddCard);
+    formPlace.reset();
+});
 
-closePhoto.addEventListener('click', closePopupPhoto);
+closePhoto.addEventListener('click', function () {
+    closePopup(popupPhoto);
+});

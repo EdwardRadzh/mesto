@@ -1,17 +1,18 @@
 .popup__photo-container {
     display: flex;
     flex-direction: column;
+    max-width: 75vw;
+    margin: 0 auto;
     position: relative;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 136px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 @media(min-width: 1024px) {
   .popup__photo-container {
-      margin-top: 90px;
-      margin-right: auto;
-      margin-left: auto;
-      max-width: 816px;
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
   }  
 }
