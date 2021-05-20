@@ -29,25 +29,38 @@ function setProfileInputValues() {
 
 // закрытие попапа по клику на Esc
 
-function closeByEsc(evt) {
-    if (evt.key === 'Escape') {
-        closePopup(popup);
-    }
-}
+// function closeByEsc(evt) {
+//     if (evt.key === 'Escape') {
+//         closePopup(popup);
+//     }
+// }
+
+const closeByEsc = () => {
+    // найти все попапы
+    const popupList = Array.from(document.querySelectorAll('.popup'))
+    // повесить слушатели на каждый попап
+    popupList.forEach((popupElement) => {
+      document.addEventListener('keydown', function(evt){
+        if (evt.key === "Escape") {
+          closePopup(popupElement)
+        }
+      })
+    })
+  }
 
 
 // открыть попап
 function openPopup(popup) {
     popup.classList.add('popup_opened');
-    document.addEventListener('keydown', function (evt) { 
-        closeByEsc(evt, popup) 
-    });
+    // document.addEventListener('keydown', function (evt) { 
+    //     closeByEsc(evt, popup) 
+    // });
+    closeByEsc(popup)
 }
 
 // закрыть попап
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
-    document.removeEventListener('keydown', closeByEsc);
 }
 
 
