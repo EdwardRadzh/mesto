@@ -30,16 +30,18 @@ function setProfileInputValues() {
 // закрытие попапа по клику на Esc
 
 function closeByEsc(evt) {
-    console.log(evt);
     if (evt.key === 'Escape') {
-        popup.classList.remove('popup_opened');
+        closePopup(popup);
     }
 }
+
 
 // открыть попап
 function openPopup(popup) {
     popup.classList.add('popup_opened');
-    document.addEventListener('keydown', closeByEsc);
+    document.addEventListener('keydown', function (evt) { 
+        closeByEsc(evt, popup) 
+    });
 }
 
 // закрыть попап
