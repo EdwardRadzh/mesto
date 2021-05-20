@@ -1,7 +1,7 @@
   .popup__input {
     border-style: none;
     border-bottom: 1px solid rgba(0, 0, 0, .2);
-    margin-bottom: 30px;
+    margin-top: 30px;
     font-family: inherit;
     font-size: 14px;
     line-height: 17px;
@@ -13,6 +13,6 @@
 @media(min-width: 768px) {
     .popup__input {
         width: 358px;
-        margin-bottom: 29px;
+        margin-top: 29px;
     }
 }
