@@ -64,6 +64,7 @@ const setEventListeners = (formElement, config) => {
     toggleButtonState(buttonElement, inputList);
 }
 
+
 const enableValidation = (config) => {
     const { formSelector, ...restConfig } = config;
     // найти все формы на странице

@@ -35,14 +35,31 @@ function setProfileInputValues() {
 //     }
 // }
 
+// закрытие попапа по клику на оверлэй
+const closeOnOverlay = () => {
+    const popupList = Array.from(document.querySelectorAll('.popup'));
+    popupList.forEach((popupElement) => {
+        popupElement.addEventListener('click', function(evt) {
+            if (evt.target.classList.contains('popup_opened')) {
+                evt.target.classList.remove('popup_opened');
+            }
+        })
+    })
+};
+// popup.addEventListener('click', function(evt) {
+//     if (evt.target.classList.contains('popup_opened')) {
+//         evt.target.classList.remove('popup_opened')
+//     }
+// })
+
 const closeByEsc = () => {
     // найти все попапы
-    const popupList = Array.from(document.querySelectorAll('.popup'))
+    const popupList = Array.from(document.querySelectorAll('.popup'));
     // повесить слушатели на каждый попап
     popupList.forEach((popupElement) => {
       document.addEventListener('keydown', function(evt){
         if (evt.key === "Escape") {
-          closePopup(popupElement)
+          closePopup(popupElement);
         }
       })
     })
@@ -56,6 +73,7 @@ function openPopup(popup) {
     //     closeByEsc(evt, popup) 
     // });
     closeByEsc(popup)
+    closeOnOverlay(popup)
 }
 
 // закрыть попап
@@ -153,9 +171,6 @@ closePopupAddCard.addEventListener('click', function () {
 closePhoto.addEventListener('click', function () {
     closePopup(popupPhoto);
 });
-
-
-
 
 
 const config = {
