@@ -61,6 +61,7 @@ function openPopup(popup) {
     clearInputError(popup);
 }
 
+// очистка полей
 function clearInputError(popup) {
     // найти форму
     const currentForm = popup.getElementsByTagName('form')[0]; // обратиться к нулевому элементу
