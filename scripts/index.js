@@ -1,12 +1,12 @@
 const openPopupButton = document.querySelector('.profile__edit');
-const popup = document.querySelector('.popup');
+// const popup = document.querySelector('.popup');
 const popupName = document.querySelector('.popup_type_profile');
 const closeProfileButton = document.querySelector('.popup__close_type_profile');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
-const formProfile = popup.querySelector('.popup__form_profile');
-const nameInput = popup.querySelector('.popup__input_value_name');
-const jobInput = popup.querySelector('.popup__input_value_description');
+const formProfile = popupName.querySelector('.popup__form_profile');
+const nameInput = popupName.querySelector('.popup__input_value_name');
+const jobInput = popupName.querySelector('.popup__input_value_description');
 const addPlaceButton = document.querySelector('.profile__add-button');
 const popupAddCard = document.querySelector('.popup_type_add');
 const openPopupAddCard = document.querySelector('.profile__add-button');
@@ -47,10 +47,9 @@ closeOnOverlay();
 
 // закрытие попапа по esc
 function closeByEsc(evt) {
-    const currentPopup = popupList.contains('popup_opened')
-    
+    const currentPopup = document.querySelector('.popup_opened')
     if (evt.key === "Escape") {
-          closePopup();
+          closePopup(currentPopup);
         }
     
 }
@@ -93,7 +92,7 @@ function addProfileSave() {
 function handleProfileFormSubmit(evt) {
     evt.preventDefault();
     addProfileSave();
-    closePopup(popup);
+    closePopup(popupName);
 };
 
 // добавить новую карточку
@@ -151,14 +150,14 @@ openPopupButton.addEventListener("click", function () {
 
 closeProfileButton.addEventListener('click', function () {
     closePopup(popupName);
-    clearInputError(popup);
+    clearInputError(popupName);
 });
 
 formProfile.addEventListener('submit', handleProfileFormSubmit);
 
 openPopupAddCard.addEventListener('click', function () {
     openPopup(popupAddCard);
-    clearInputError(popup);
+    clearInputError(popupAddCard);
 });
 
 closePopupAddCard.addEventListener('click', function () {
