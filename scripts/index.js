@@ -1,5 +1,4 @@
 const openPopupButton = document.querySelector('.profile__edit');
-// const popup = document.querySelector('.popup');
 const popupName = document.querySelector('.popup_type_profile');
 const closeProfileButton = document.querySelector('.popup__close_type_profile');
 const profileName = document.querySelector('.profile__name');
