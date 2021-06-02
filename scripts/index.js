@@ -65,6 +65,48 @@ function openPopup(popupName) {
     
 }
 
+// очистка полей
+// function clearInputError(popup) {
+//     // найти форму
+//     const currentForm = popup.getElementsByTagName('form')[0]; // обратиться к нулевому элементу
+//     if (currentForm) {
+//         const formInputs = Array.from(currentForm.getElementsByTagName('input')); // находим инпуты
+//         formInputs.forEach((input) => {
+//             hideInputError(currentForm, input);
+//         })
+//         const button = currentForm.getElementsByTagName('button')[0];
+//         toggleButtonState(button, formInputs);
+//     }
+// }
+
+// закрыть попап
+function closePopup(popup) {
+    popup.classList.remove('popup_opened');
+    document.removeEventListener("keydown", closeByEsc);
+}
+
+
+// отправка данных из инпута на страницу
+function addProfileSave() {
+    profileName.textContent = nameInput.value;
+    profileDescription.textContent = jobInput.value;
+}
+
+// сохрание данных из попапа на страницу
+function handleProfileFormSubmit(evt) {
+    evt.preventDefault();
+    addProfileSave();
+    closePopup(popupName);
+};
+
+// добавить новую карточку
+function handleCardSubmit(evt) {
+    evt.preventDefault();
+    addCard(placeInput.value, linkInput.value, 'start');
+    closePopup(popupAddCard);
+    formPlace.reset();
+};
+ 
 // заполненный шаблон карточки
 function getCard (name, link) {
     const card = new Card(name, link, '#template-element', openPopup, popupPhoto, photo, photoName )
