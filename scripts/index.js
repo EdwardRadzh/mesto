@@ -65,20 +65,6 @@ function openPopup(popupName) {
     
 }
 
-// очистка полей
-// function clearInputError(popup) {
-//     // найти форму
-//     const currentForm = popup.getElementsByTagName('form')[0]; // обратиться к нулевому элементу
-//     if (currentForm) {
-//         const formInputs = Array.from(currentForm.getElementsByTagName('input')); // находим инпуты
-//         formInputs.forEach((input) => {
-//             hideInputError(currentForm, input);
-//         })
-//         const button = currentForm.getElementsByTagName('button')[0];
-//         toggleButtonState(button, formInputs);
-//     }
-// }
-
 // закрыть попап
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
