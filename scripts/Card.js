@@ -35,6 +35,7 @@ export class Card {
 
     _handleRemoveClick() {
         this._item.remove();
+        this._item = null;
     }
 
     _handleOpenReview(openPopup, popupPhoto, photo, photoName) {

@@ -65,19 +65,14 @@ export class FormValidator {
     
     }
 
-    clearInputError(popup) {
-        const currentForm = popup.getElementsByTagName('form')[0];
-        if (currentForm) {
-            const formInputs = Array.from(currentForm.getElementsByTagName('input'));
-            formInputs.forEach((input) => {
-                this._hideInputError(input);
-            })
-            const button = currentForm.getElementsByTagName('button')[0];
-            this.toggleButtonState(button, formInputs);
-        }
+    clearInputError() {
+        this._inputList.forEach((e) => {
+            this._hideInputError(e);
+            this.toggleButtonState();
+        })
     }
     
     enableValidation() {
-        this._setEventListeners(this._formElement, this._config);
+        this._setEventListeners();
     }
 }
