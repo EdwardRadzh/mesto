@@ -1,5 +1,5 @@
 import '../../src/pages/index.css';
-import { initialCards } from '../scripts/initial-cards.js';
+import { initialCards } from '../utils/initial-cards.js';
 import { Card } from '../scripts/Card.js';
 import { FormValidator } from '../scripts/FormValidator.js';
 import { Section } from '../scripts/Section.js';
@@ -19,9 +19,17 @@ const popupWithImage = new PopupWithImage('.popup_type_open');
 const cardsSection = new Section({
     items: initialCards,
     renderer: (cardData) => {
-        const card = new Card(cardData.name, cardData.link, '#template-element', popupWithImage);
+        const card = new Card(cardData.name, cardData.link, '#template-element', () => {
+           
+            // const { link, name } = cardData;
+            popupWithImage.handlePopupReview(cardData.link, cardData.name);
+            
+        });
+
+        const newCard = card.render();
         
-        return card.render();
+        cardsSection.element.insertAdjacentElement('afterbegin', newCard);
+        
     }
 }, '.elements');
 
@@ -68,10 +76,11 @@ closeProfileButton.addEventListener('click', function () {
 
 openPopupAddCard.addEventListener('click', function () {
     addCardPopup.open();
+    addCardFormValidator.toggleButtonState();
 });
 
 closePopupAddCard.addEventListener('click', function () {
-    addCardPopup.close()
+    addCardPopup.close();
     addCardFormValidator.clearInputError();
 });
 

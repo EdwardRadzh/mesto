@@ -3,16 +3,16 @@ export class Section {
         this._items = items;
         this._renderer = renderer;
 
-        this._element = document.querySelector(containerSelector);
+        this.element = document.querySelector(containerSelector);
     };
 
     renderAll() {
-        this._items.forEach(cardData => {
-            this.addItem(cardData);
+        this._items.forEach(item => {
+            this._renderer(item);
         });
     };
 
     addItem(cardData) {
-        this._element.append(this._renderer(cardData));
+        this._renderer(cardData);
     };
 };

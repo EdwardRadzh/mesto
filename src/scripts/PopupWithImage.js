@@ -7,6 +7,7 @@ export class PopupWithImage extends Popup {
 
     open() {
         super.open();
+        super.setEventListeners();
     };
 
     handlePopupReview(link, description) {
@@ -14,7 +15,9 @@ export class PopupWithImage extends Popup {
         const photoDescription = this.popupElement.querySelector('.popup__photo-description');
 
         photo.src = link;
+        photo.alt = description;
         photoDescription.textContent = description;
+
 
         this.open();
     };

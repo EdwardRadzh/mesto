@@ -17,6 +17,7 @@ export class FormValidator {
     });
 
     // устанавливаем кнопку
+    
     // this.toggleButtonState(this._buttonElement, this._inputList);
     };
 

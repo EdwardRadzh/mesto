@@ -1,15 +1,16 @@
 export class Card {
-    constructor(name, link, templateSelector, popupWithImage) {
+    constructor(name, link, templateSelector, handlePopupReview) {
         this._name = name;
         this._link = link;
         this._templateSelector = templateSelector;
-
-        this._createElements();
-        this._setElementsListeners(popupWithImage);
+        this.handlePopupReview = handlePopupReview
         
+        this._getTemplate();
+        this._createElements();
+        this._setElementsListeners(handlePopupReview);
     }
 
-    _createElements() {
+    _getTemplate() {
         const templateElement = document.querySelector(this._templateSelector).content;
         this._item = templateElement.querySelector('.elements__element').cloneNode(true);
 
@@ -17,16 +18,18 @@ export class Card {
         this._deleteButton = this._item.querySelector('.elements__trash');
         this._cardImage = this._item.querySelector('.elements__img');
         this._cardTitle = this._item.querySelector('.elements__title');
+    }
 
+    _createElements() {
         this._cardImage.src = this._link;
         this._cardImage.alt = this._name;
         this._cardTitle.textContent = this._name;
     };
 
-    _setElementsListeners(popupWithImage) {
+    _setElementsListeners() {
         this._likeButton.addEventListener('click', (e) => this._handleLikeClick(e));
         this._deleteButton.addEventListener('click', (e) => this._handleRemoveClick(e));
-        this._cardImage.addEventListener('click', () => popupWithImage.handlePopupReview(this._link, this._name));
+        this._cardImage.addEventListener('click', () => this.handlePopupReview());
     };
 
     _handleLikeClick() {

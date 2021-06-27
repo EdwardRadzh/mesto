@@ -4,7 +4,6 @@ export class PopupWithForm extends Popup {
     constructor(popupSelector, onSubmitCb, userInfo) {
         super(popupSelector);
         this._onSubmitCb = onSubmitCb;
-        // this._inputsConfig = inputsConfig;
         this._formElement = this.popupElement.querySelector('.popup__form');
         this._formAddCardElement = this.popupElement.querySelector('.popup__form_place');
         this._userInfo = userInfo;

@@ -12,8 +12,7 @@ export class UserInfo {
         };
     };
     
-    setUserInfo(userData) {
-        const { name, description } = userData;
+    setUserInfo( { name, description } ) {
         this._userNameEl.textContent = name;
         this._userDescriptionEl.textContent = description;
     };
