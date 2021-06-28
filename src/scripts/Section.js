@@ -15,4 +15,5 @@ export class Section {
     addItem(cardData) {
         this._renderer(cardData);
     };
+
 };

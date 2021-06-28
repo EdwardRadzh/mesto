@@ -7,7 +7,7 @@ export class Card {
         
         this._getTemplate();
         this._createElements();
-        this._setElementsListeners(handlePopupReview);
+        this._setElementsListeners();
     }
 
     _getTemplate() {

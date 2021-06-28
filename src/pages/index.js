@@ -54,9 +54,7 @@ addCardPopup.setEventListeners();
 const editProfilePopup = new PopupWithForm(
     '.popup_type_profile', 
     (profileData) => { 
-        console.log(profileData)
-        userInfo.setUserInfo(profileData)
-    
+    userInfo.setUserInfo(profileData);
     editProfilePopup.close();
     },
     userInfo
@@ -67,21 +65,25 @@ editProfilePopup.setEventListeners();
 
 openPopupButton.addEventListener("click", function () {
     editProfilePopup.open();
+    profileFormValidator.clearInputError();
 });
 
 closeProfileButton.addEventListener('click', function () {
     editProfilePopup.close();
-    profileFormValidator.clearInputError();
+    
+    
 });
 
 openPopupAddCard.addEventListener('click', function () {
     addCardPopup.open();
     addCardFormValidator.toggleButtonState();
+    addCardFormValidator.clearInputError();
 });
 
 closePopupAddCard.addEventListener('click', function () {
     addCardPopup.close();
     addCardFormValidator.clearInputError();
+    // editProfilePopup.clearInputError()
 });
 
 closePhoto.addEventListener('click', function () {
