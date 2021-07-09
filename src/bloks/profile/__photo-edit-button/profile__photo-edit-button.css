@@ -1,0 +1,21 @@
+.profile__photo-edit-button {
+    padding: 0;
+    border: 0;
+    background: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.profile__photo-edit-button:hover,
+.profile__photo-edit-button:focus {
+  background-image: url(../../../images/redactAvatar.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,.8);
+  opacity: 0.6;
+}

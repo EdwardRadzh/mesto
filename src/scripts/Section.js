@@ -16,4 +16,7 @@ export class Section {
         this._renderer(cardData);
     };
 
-};
+    getInitialCards(data) {
+        this._items = data
+    }
+}

@@ -3,10 +3,10 @@
     font-size: 27px;
     line-height: 33px;
     font-weight: 500;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */
     white-space: nowrap;
     overflow: hidden;
-    max-width: 282px;
+    width: max-content;
     text-align: center;
 }
 

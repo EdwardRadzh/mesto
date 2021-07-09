@@ -7,7 +7,17 @@ export class PopupWithForm extends Popup {
         this._formElement = this.popupElement.querySelector('.popup__form');
         this._formAddCardElement = this.popupElement.querySelector('.popup__form_place');
         this._userInfo = userInfo;
+        this._submitButton = this._formElement.querySelector('.popup__btn');
+        this._initialValueSubmitButton = this._submitButton.textContent;
     };
+
+    renderLoading(isLoading, initialDownloadMessage = 'Cохранение...') {
+        if (isLoading) {
+          this._submitButton.textContent = initialDownloadMessage;
+        } else {
+          this._submitButton.textContent = this._initialValueSubmitButton;
+        }
+      }
 
     _getInputValues() {
         const result = {}

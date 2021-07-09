@@ -14,7 +14,10 @@
     <main class="wrapper">
         <section class="profile">
             <div class="profile__general">
-                <img class="profile__photo" src="<%=require("../src/images/Photo_person.jpg")%>" alt="аватар">
+                <div class="profile__container-avatar">
+                    <img class="profile__photo" src="<%=require("../src/images/Photo_person.jpg")%>" alt="avatar">
+                    <button class="profile__photo-edit-button" aria-label="открыть форму обновления аватарки"></button>
+                </div>
                 <div class="profile__info">
                     <h1 class="profile__name">Жак-Ив Кусто</h1>
                     <button aria-label="Изменить" class="profile__edit" type="button">
@@ -47,6 +50,28 @@
         </div>
     </div>
 
+    <div class="popup popup_type_edit">
+        <div class="popup__container">
+            <button type="button" class="popup__close popup__close_type_profile"></button>
+            <h2 class="popup__title">Обновить аватар</h2>
+            <form name="avatar-form" class="popup__form popup__form_profile" novalidate>
+                <input name="avatar" id="avatar-link" minlength="2" class="popup__input" type="url" required placeholder="Ссылка на картинку">
+                <span class="popup__input-error" id="avatar-link-error"></span>
+                <button type="submit" class="popup__btn">Сохранить</button>
+            </form>      
+        </div>
+    </div>
+
+    <div class="popup popup_type_delete">
+        <div class="popup__container">
+            <button type="button" class="popup__close popup__close_type_delete"></button>
+            <h2 class="popup__title">Вы уверены?</h2>
+            <form name="delete-form" class="popup__form popup__form_delete" novalidate>
+                <button type="submit" class="popup__btn popup__btn_type_delete-card">Да</button>
+            </form>      
+        </div>
+    </div>
+
     <div class="popup popup_type_add">
         <div class="popup__container">
             <button type="button" class="popup__close popup__close_type_add-button"></button>
@@ -69,13 +94,19 @@
         </div>
     </div>
 
+    
+
     <template id="template-element">
         <div class="elements__element">
             <button type="button" class="elements__trash"></button>
             <div class="elements__img-wrapper"><img class="elements__img" src="#" alt="Фото"></div>
             <div class="elements__overlay">
                 <h2 class="elements__title"></h2>
-                <button type="button" class="elements__like"></button>
+                <div class="elements__like-container">
+                    <button type="button" class="elements__like"></button>
+                    <span class="elements__like-count"></span>
+                </div>
+                
             </div>
         </div>
     </template>
