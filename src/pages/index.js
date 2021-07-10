@@ -14,7 +14,6 @@ const openPopupAddCard = document.querySelector('.profile__add-button');
 const closePopupAddCard = document.querySelector('.popup__close_type_add-button');
 const closePhoto = document.querySelector('.popup__close_type_photo-button');
 const editAvatarButton = document.querySelector('.profile__photo-edit-button');
-const confirmDeleteCardBtn = document.querySelector('.popup__btn_type_delete-card');
 
 let userId = null;
 
@@ -35,21 +34,7 @@ const cardsList = new Section({
             popupWithImage.handlePopupReview(item.link, item.name);
         },  
         () => { 
-            popupDeleteCard.open();
-            confirmDeleteCardBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                api.deleteCard(item)
-                .then(() => {
-                newCard.delete()
-                
-            })
-                .catch((err) => {
-                console.log(err);
-            })
-            .finally(() => {
-                popupDeleteCard.close()
-            })
-            })
+            onDeleteBtnClick(item, newCard);
 
         },
         userId,
@@ -76,18 +61,23 @@ const cardsList = new Section({
         });
         const card = newCard.render();
         cardsList.element.prepend(card);
+        
     }
 }, '.elements')
 
-api.getCards()
-.then((data) => {
-    const initialCards = data.reverse();
-    cardsList.getInitialCards(initialCards);
-    cardsList.renderAll();
-})
-.catch((err) => {
-    console.log(err);
-})
+Promise.all([
+    api.getUserInfo(),
+    api.getCards(),
+  ])
+    .then(([userData, initialCards]) => {
+        userId = userData._id;
+        userInfo.setUserInfo(userData);
+        cardsList.getInitialCards(initialCards.reverse());
+        cardsList.renderAll();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 
 const userInfo = new UserInfo({
     userNameSelector: '.profile__name',
@@ -125,14 +115,13 @@ const editProfilePopup = new PopupWithForm(
     api.setUserInfoChanges(profileData)
     .then((res) => {
         userInfo.setUserInfo(res)
-        // editProfilePopup.close()
+        editProfilePopup.close()
     })
     .catch((err) => {
         console.log(err);
     })
     .finally(() => {
         editProfilePopup.renderLoading(false);
-        editProfilePopup.close()
     })
     },
     userInfo
@@ -140,10 +129,25 @@ const editProfilePopup = new PopupWithForm(
 
 editProfilePopup.setEventListeners();
 
-const popupDeleteCard = new PopupDeleteCard('.popup_type_delete');
+const popupDeleteCard = new PopupDeleteCard('.popup_type_delete', (id, element) => {
+    
+    console.log(id);
+    api.deleteCard(id)
+    .then(() => {
+        element.delete();
+        console.log(element);
+        popupDeleteCard.close();
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+});
 
 popupDeleteCard.setEventListeners();
 
+const onDeleteBtnClick = (id, element) => {
+    popupDeleteCard.open(id, element);
+}
 
 const popupWithUpdateAvatarForm = new PopupWithForm(
     '.popup_type_edit',
@@ -184,6 +188,7 @@ openPopupAddCard.addEventListener('click', function () {
 closePopupAddCard.addEventListener('click', function () {
     addCardPopup.close();
     addCardFormValidator.clearInputError();
+    addCardPopup.checkBtnEnable()
 });
 
 closePhoto.addEventListener('click', function () {
@@ -226,13 +231,4 @@ const editAvatarValidator = new FormValidator(
 
 editAvatarValidator.enableValidation();
 
-  
-api.getInitialData()
-  .then((data) => {
-    const [userData] = data;
-    userId = userData._id;
-    userInfo.setUserInfo(userData);
-  })
-  .catch((err) => {
-    console.log(err);
-  })
+

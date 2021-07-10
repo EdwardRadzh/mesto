@@ -62,10 +62,6 @@ export class Api {
         }).then(this._checkError)
     }
 
-    getInitialData() {
-        return Promise.all([this.getUserInfo()]);
-    }
-
     //Удаление карточки
     deleteCard(data) {
         return fetch(`${this._url}/cards/${data._id}`, {

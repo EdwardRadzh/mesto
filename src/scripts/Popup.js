@@ -14,10 +14,14 @@ export class Popup {
     close() {
         this.popupElement.classList.remove('popup_opened');
         document.removeEventListener('keydown', this._handleEscClose);
+        
+    };
+
+    checkBtnEnable() {
         if (this._saveCardBtn) {
             this._saveCardBtn.disabled = true;
         };
-    };
+    }
 
     setEventListeners() {
         this.popupElement.addEventListener('mousedown', (evt) => {
